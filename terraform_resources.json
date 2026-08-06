@@ -1,0 +1,539 @@
+{
+  "resources": [
+    {
+      "id": "archive_file.cloudtrail_logger_zip",
+      "category": "sandbox",
+      "name": "cloudtrail_logger_zip",
+      "note": "Live managed archive_file resource: cloudtrail_logger_zip."
+    },
+    {
+      "id": "archive_file.lambda_zip",
+      "category": "sandbox",
+      "name": "lambda_zip",
+      "note": "Live managed archive_file resource: lambda_zip."
+    },
+    {
+      "id": "aws_ami.amazon_linux",
+      "category": "sandbox",
+      "name": "amazon_linux",
+      "note": "Live managed aws_ami resource: amazon_linux."
+    },
+    {
+      "id": "aws_subnets.default",
+      "category": "sandbox",
+      "name": "default",
+      "note": "Live managed aws_subnets resource: default."
+    },
+    {
+      "id": "aws_vpc.default",
+      "category": "sandbox",
+      "name": "default",
+      "note": "Live managed aws_vpc resource: default."
+    },
+    {
+      "id": "aws_apigatewayv2_api.api_gateway",
+      "category": "api",
+      "name": "api_gateway",
+      "note": "Live managed aws_apigatewayv2_api resource: api_gateway."
+    },
+    {
+      "id": "aws_apigatewayv2_authorizer.cognito_jwt_auth",
+      "category": "api",
+      "name": "cognito_jwt_auth",
+      "note": "Live managed aws_apigatewayv2_authorizer resource: cognito_jwt_auth."
+    },
+    {
+      "id": "aws_apigatewayv2_integration.lambda_integration",
+      "category": "api",
+      "name": "lambda_integration",
+      "note": "Live managed aws_apigatewayv2_integration resource: lambda_integration."
+    },
+    {
+      "id": "aws_apigatewayv2_route.route_ai_chat",
+      "category": "api",
+      "name": "route_ai_chat",
+      "note": "Live managed aws_apigatewayv2_route resource: route_ai_chat."
+    },
+    {
+      "id": "aws_apigatewayv2_route.route_ai_summary",
+      "category": "api",
+      "name": "route_ai_summary",
+      "note": "Live managed aws_apigatewayv2_route resource: route_ai_summary."
+    },
+    {
+      "id": "aws_apigatewayv2_route.route_audit_logs",
+      "category": "api",
+      "name": "route_audit_logs",
+      "note": "Live managed aws_apigatewayv2_route resource: route_audit_logs."
+    },
+    {
+      "id": "aws_apigatewayv2_route.route_delete",
+      "category": "api",
+      "name": "route_delete",
+      "note": "Live managed aws_apigatewayv2_route resource: route_delete."
+    },
+    {
+      "id": "aws_apigatewayv2_route.route_exempt",
+      "category": "api",
+      "name": "route_exempt",
+      "note": "Live managed aws_apigatewayv2_route resource: route_exempt."
+    },
+    {
+      "id": "aws_apigatewayv2_route.route_metrics",
+      "category": "api",
+      "name": "route_metrics",
+      "note": "Live managed aws_apigatewayv2_route resource: route_metrics."
+    },
+    {
+      "id": "aws_apigatewayv2_route.route_nudge",
+      "category": "api",
+      "name": "route_nudge",
+      "note": "Live managed aws_apigatewayv2_route resource: route_nudge."
+    },
+    {
+      "id": "aws_apigatewayv2_route.route_upgrade",
+      "category": "api",
+      "name": "route_upgrade",
+      "note": "Live managed aws_apigatewayv2_route resource: route_upgrade."
+    },
+    {
+      "id": "aws_apigatewayv2_route.route_volumes",
+      "category": "api",
+      "name": "route_volumes",
+      "note": "Live managed aws_apigatewayv2_route resource: route_volumes."
+    },
+    {
+      "id": "aws_apigatewayv2_stage.api_stage",
+      "category": "api",
+      "name": "api_stage",
+      "note": "Live managed aws_apigatewayv2_stage resource: api_stage."
+    },
+    {
+      "id": "aws_athena_workgroup.finops_workgroup",
+      "category": "database",
+      "name": "finops_workgroup",
+      "note": "Live managed aws_athena_workgroup resource: finops_workgroup."
+    },
+    {
+      "id": "aws_cloudfront_distribution.frontend_distribution",
+      "category": "delivery",
+      "name": "frontend_distribution",
+      "note": "Live managed aws_cloudfront_distribution resource: frontend_distribution."
+    },
+    {
+      "id": "aws_cloudfront_origin_access_control.frontend_oac",
+      "category": "delivery",
+      "name": "frontend_oac",
+      "note": "Live managed aws_cloudfront_origin_access_control resource: frontend_oac."
+    },
+    {
+      "id": "aws_cloudtrail.management_trail",
+      "category": "delivery",
+      "name": "management_trail",
+      "note": "Live managed aws_cloudtrail resource: management_trail."
+    },
+    {
+      "id": "aws_cloudwatch_event_bus.hub_bus",
+      "category": "delivery",
+      "name": "hub_bus",
+      "note": "Live managed aws_cloudwatch_event_bus resource: hub_bus."
+    },
+    {
+      "id": "aws_cloudwatch_event_permission.spokes_bus_permission",
+      "category": "delivery",
+      "name": "spokes_bus_permission",
+      "note": "Live managed aws_cloudwatch_event_permission resource: spokes_bus_permission."
+    },
+    {
+      "id": "aws_cloudwatch_event_rule.daily_rule",
+      "category": "delivery",
+      "name": "daily_rule",
+      "note": "Live managed aws_cloudwatch_event_rule resource: daily_rule."
+    },
+    {
+      "id": "aws_cloudwatch_event_rule.delete_volume_s3_writer",
+      "category": "delivery",
+      "name": "delete_volume_s3_writer",
+      "note": "Live managed aws_cloudwatch_event_rule resource: delete_volume_s3_writer."
+    },
+    {
+      "id": "aws_cloudwatch_event_rule.monthly_rule",
+      "category": "delivery",
+      "name": "monthly_rule",
+      "note": "Live managed aws_cloudwatch_event_rule resource: monthly_rule."
+    },
+    {
+      "id": "aws_cloudwatch_event_target.daily_target",
+      "category": "delivery",
+      "name": "daily_target",
+      "note": "Live managed aws_cloudwatch_event_target resource: daily_target."
+    },
+    {
+      "id": "aws_cloudwatch_event_target.delete_volume_s3_writer_target",
+      "category": "delivery",
+      "name": "delete_volume_s3_writer_target",
+      "note": "Live managed aws_cloudwatch_event_target resource: delete_volume_s3_writer_target."
+    },
+    {
+      "id": "aws_cloudwatch_event_target.monthly_target",
+      "category": "delivery",
+      "name": "monthly_target",
+      "note": "Live managed aws_cloudwatch_event_target resource: monthly_target."
+    },
+    {
+      "id": "aws_cloudwatch_log_group.lambda_log_group",
+      "category": "delivery",
+      "name": "lambda_log_group",
+      "note": "Live managed aws_cloudwatch_log_group resource: lambda_log_group."
+    },
+    {
+      "id": "aws_cloudwatch_log_metric_filter.lambda_errors",
+      "category": "delivery",
+      "name": "lambda_errors",
+      "note": "Live managed aws_cloudwatch_log_metric_filter resource: lambda_errors."
+    },
+    {
+      "id": "aws_cloudwatch_metric_alarm.lambda_errors_alarm",
+      "category": "delivery",
+      "name": "lambda_errors_alarm",
+      "note": "Live managed aws_cloudwatch_metric_alarm resource: lambda_errors_alarm."
+    },
+    {
+      "id": "aws_cloudwatch_metric_alarm.lambda_timeout_alarm",
+      "category": "delivery",
+      "name": "lambda_timeout_alarm",
+      "note": "Live managed aws_cloudwatch_metric_alarm resource: lambda_timeout_alarm."
+    },
+    {
+      "id": "aws_cognito_user_group.admin_group",
+      "category": "users",
+      "name": "admin_group",
+      "note": "Live managed aws_cognito_user_group resource: admin_group."
+    },
+    {
+      "id": "aws_cognito_user_group.approver_group",
+      "category": "users",
+      "name": "approver_group",
+      "note": "Live managed aws_cognito_user_group resource: approver_group."
+    },
+    {
+      "id": "aws_cognito_user_group.operator_group",
+      "category": "users",
+      "name": "operator_group",
+      "note": "Live managed aws_cognito_user_group resource: operator_group."
+    },
+    {
+      "id": "aws_cognito_user_group.reader_group",
+      "category": "users",
+      "name": "reader_group",
+      "note": "Live managed aws_cognito_user_group resource: reader_group."
+    },
+    {
+      "id": "aws_cognito_user_pool.user_pool",
+      "category": "users",
+      "name": "user_pool",
+      "note": "Live managed aws_cognito_user_pool resource: user_pool."
+    },
+    {
+      "id": "aws_cognito_user_pool_client.user_pool_client",
+      "category": "users",
+      "name": "user_pool_client",
+      "note": "Live managed aws_cognito_user_pool_client resource: user_pool_client."
+    },
+    {
+      "id": "aws_config_configuration_aggregator.org_aggregator",
+      "category": "database",
+      "name": "org_aggregator",
+      "note": "Live managed aws_config_configuration_aggregator resource: org_aggregator."
+    },
+    {
+      "id": "aws_dynamodb_table.remediation_state",
+      "category": "database",
+      "name": "remediation_state",
+      "note": "Live managed aws_dynamodb_table resource: remediation_state."
+    },
+    {
+      "id": "aws_ebs_volume.vol_a_warn",
+      "category": "sandbox",
+      "name": "vol_a_warn",
+      "note": "Live managed aws_ebs_volume resource: vol_a_warn."
+    },
+    {
+      "id": "aws_ebs_volume.vol_b_attached",
+      "category": "sandbox",
+      "name": "vol_b_attached",
+      "note": "Live managed aws_ebs_volume resource: vol_b_attached."
+    },
+    {
+      "id": "aws_ebs_volume.vol_c_exempt",
+      "category": "sandbox",
+      "name": "vol_c_exempt",
+      "note": "Live managed aws_ebs_volume resource: vol_c_exempt."
+    },
+    {
+      "id": "aws_ebs_volume.vol_d_delete",
+      "category": "sandbox",
+      "name": "vol_d_delete",
+      "note": "Live managed aws_ebs_volume resource: vol_d_delete."
+    },
+    {
+      "id": "aws_glue_catalog_database.finops_db",
+      "category": "database",
+      "name": "finops_db",
+      "note": "Live managed aws_glue_catalog_database resource: finops_db."
+    },
+    {
+      "id": "aws_glue_catalog_table.billing_focus_table",
+      "category": "database",
+      "name": "billing_focus_table",
+      "note": "Live managed aws_glue_catalog_table resource: billing_focus_table."
+    },
+    {
+      "id": "aws_iam_policy.lambda_policy",
+      "category": "database",
+      "name": "lambda_policy",
+      "note": "Live managed aws_iam_policy resource: lambda_policy."
+    },
+    {
+      "id": "aws_iam_role.config_aggregator_role",
+      "category": "database",
+      "name": "config_aggregator_role",
+      "note": "Live managed aws_iam_role resource: config_aggregator_role."
+    },
+    {
+      "id": "aws_iam_role.lambda_role",
+      "category": "database",
+      "name": "lambda_role",
+      "note": "Live managed aws_iam_role resource: lambda_role."
+    },
+    {
+      "id": "aws_iam_role_policy_attachment.config_aggregator_policy",
+      "category": "database",
+      "name": "config_aggregator_policy",
+      "note": "Live managed aws_iam_role_policy_attachment resource: config_aggregator_policy."
+    },
+    {
+      "id": "aws_iam_role_policy_attachment.lambda_attach",
+      "category": "database",
+      "name": "lambda_attach",
+      "note": "Live managed aws_iam_role_policy_attachment resource: lambda_attach."
+    },
+    {
+      "id": "aws_instance.poc_instance",
+      "category": "sandbox",
+      "name": "poc_instance",
+      "note": "Live managed aws_instance resource: poc_instance."
+    },
+    {
+      "id": "aws_kms_alias.finops_key_alias",
+      "category": "sandbox",
+      "name": "finops_key_alias",
+      "note": "Live managed aws_kms_alias resource: finops_key_alias."
+    },
+    {
+      "id": "aws_kms_key.finops_key",
+      "category": "sandbox",
+      "name": "finops_key",
+      "note": "Live managed aws_kms_key resource: finops_key."
+    },
+    {
+      "id": "aws_lambda_function.cloudtrail_logger",
+      "category": "sandbox",
+      "name": "cloudtrail_logger",
+      "note": "Live managed aws_lambda_function resource: cloudtrail_logger."
+    },
+    {
+      "id": "aws_lambda_function.governance_lambda",
+      "category": "sandbox",
+      "name": "governance_lambda",
+      "note": "Live managed aws_lambda_function resource: governance_lambda."
+    },
+    {
+      "id": "aws_lambda_permission.allow_apigateway",
+      "category": "api",
+      "name": "allow_apigateway",
+      "note": "Live managed aws_lambda_permission resource: allow_apigateway."
+    },
+    {
+      "id": "aws_lambda_permission.allow_daily_trigger",
+      "category": "api",
+      "name": "allow_daily_trigger",
+      "note": "Live managed aws_lambda_permission resource: allow_daily_trigger."
+    },
+    {
+      "id": "aws_lambda_permission.allow_eventbridge_to_invoke_logger",
+      "category": "api",
+      "name": "allow_eventbridge_to_invoke_logger",
+      "note": "Live managed aws_lambda_permission resource: allow_eventbridge_to_invoke_logger."
+    },
+    {
+      "id": "aws_lambda_permission.allow_monthly_trigger",
+      "category": "api",
+      "name": "allow_monthly_trigger",
+      "note": "Live managed aws_lambda_permission resource: allow_monthly_trigger."
+    },
+    {
+      "id": "aws_s3_bucket.athena_results_bucket",
+      "category": "storage",
+      "name": "athena_results_bucket",
+      "note": "Live managed aws_s3_bucket resource: athena_results_bucket."
+    },
+    {
+      "id": "aws_s3_bucket.audit_bucket",
+      "category": "storage",
+      "name": "audit_bucket",
+      "note": "Live managed aws_s3_bucket resource: audit_bucket."
+    },
+    {
+      "id": "aws_s3_bucket.billing_bucket",
+      "category": "storage",
+      "name": "billing_bucket",
+      "note": "Live managed aws_s3_bucket resource: billing_bucket."
+    },
+    {
+      "id": "aws_s3_bucket.cloudtrail_bucket",
+      "category": "storage",
+      "name": "cloudtrail_bucket",
+      "note": "Live managed aws_s3_bucket resource: cloudtrail_bucket."
+    },
+    {
+      "id": "aws_s3_bucket.frontend_bucket",
+      "category": "storage",
+      "name": "frontend_bucket",
+      "note": "Live managed aws_s3_bucket resource: frontend_bucket."
+    },
+    {
+      "id": "aws_s3_bucket.reports_bucket",
+      "category": "storage",
+      "name": "reports_bucket",
+      "note": "Live managed aws_s3_bucket resource: reports_bucket."
+    },
+    {
+      "id": "aws_s3_bucket_lifecycle_configuration.athena_results_lifecycle",
+      "category": "storage",
+      "name": "athena_results_lifecycle",
+      "note": "Live managed aws_s3_bucket_lifecycle_configuration resource: athena_results_lifecycle."
+    },
+    {
+      "id": "aws_s3_bucket_object_lock_configuration.reports_lock",
+      "category": "storage",
+      "name": "reports_lock",
+      "note": "Live managed aws_s3_bucket_object_lock_configuration resource: reports_lock."
+    },
+    {
+      "id": "aws_s3_bucket_policy.billing_policy",
+      "category": "storage",
+      "name": "billing_policy",
+      "note": "Live managed aws_s3_bucket_policy resource: billing_policy."
+    },
+    {
+      "id": "aws_s3_bucket_policy.cloudtrail_policy",
+      "category": "storage",
+      "name": "cloudtrail_policy",
+      "note": "Live managed aws_s3_bucket_policy resource: cloudtrail_policy."
+    },
+    {
+      "id": "aws_s3_bucket_policy.frontend_bucket_policy",
+      "category": "storage",
+      "name": "frontend_bucket_policy",
+      "note": "Live managed aws_s3_bucket_policy resource: frontend_bucket_policy."
+    },
+    {
+      "id": "aws_s3_bucket_public_access_block.athena_results_public_block",
+      "category": "storage",
+      "name": "athena_results_public_block",
+      "note": "Live managed aws_s3_bucket_public_access_block resource: athena_results_public_block."
+    },
+    {
+      "id": "aws_s3_bucket_public_access_block.audit_public_block",
+      "category": "storage",
+      "name": "audit_public_block",
+      "note": "Live managed aws_s3_bucket_public_access_block resource: audit_public_block."
+    },
+    {
+      "id": "aws_s3_bucket_public_access_block.billing_public_block",
+      "category": "storage",
+      "name": "billing_public_block",
+      "note": "Live managed aws_s3_bucket_public_access_block resource: billing_public_block."
+    },
+    {
+      "id": "aws_s3_bucket_public_access_block.frontend_public_block",
+      "category": "storage",
+      "name": "frontend_public_block",
+      "note": "Live managed aws_s3_bucket_public_access_block resource: frontend_public_block."
+    },
+    {
+      "id": "aws_s3_bucket_public_access_block.reports_public_block",
+      "category": "storage",
+      "name": "reports_public_block",
+      "note": "Live managed aws_s3_bucket_public_access_block resource: reports_public_block."
+    },
+    {
+      "id": "aws_s3_bucket_server_side_encryption_configuration.athena_results_encrypt",
+      "category": "storage",
+      "name": "athena_results_encrypt",
+      "note": "Live managed aws_s3_bucket_server_side_encryption_configuration resource: athena_results_encrypt."
+    },
+    {
+      "id": "aws_s3_bucket_server_side_encryption_configuration.audit_encrypt",
+      "category": "storage",
+      "name": "audit_encrypt",
+      "note": "Live managed aws_s3_bucket_server_side_encryption_configuration resource: audit_encrypt."
+    },
+    {
+      "id": "aws_s3_bucket_server_side_encryption_configuration.billing_encrypt",
+      "category": "storage",
+      "name": "billing_encrypt",
+      "note": "Live managed aws_s3_bucket_server_side_encryption_configuration resource: billing_encrypt."
+    },
+    {
+      "id": "aws_s3_bucket_server_side_encryption_configuration.frontend_encrypt",
+      "category": "storage",
+      "name": "frontend_encrypt",
+      "note": "Live managed aws_s3_bucket_server_side_encryption_configuration resource: frontend_encrypt."
+    },
+    {
+      "id": "aws_s3_bucket_server_side_encryption_configuration.reports_encrypt",
+      "category": "storage",
+      "name": "reports_encrypt",
+      "note": "Live managed aws_s3_bucket_server_side_encryption_configuration resource: reports_encrypt."
+    },
+    {
+      "id": "aws_s3_bucket_versioning.reports_versioning",
+      "category": "storage",
+      "name": "reports_versioning",
+      "note": "Live managed aws_s3_bucket_versioning resource: reports_versioning."
+    },
+    {
+      "id": "aws_sns_topic.alerts_topic",
+      "category": "sandbox",
+      "name": "alerts_topic",
+      "note": "Live managed aws_sns_topic resource: alerts_topic."
+    },
+    {
+      "id": "aws_sns_topic_subscription.alerts_email",
+      "category": "sandbox",
+      "name": "alerts_email",
+      "note": "Live managed aws_sns_topic_subscription resource: alerts_email."
+    },
+    {
+      "id": "aws_ssm_parameter.servicenow_password",
+      "category": "sandbox",
+      "name": "servicenow_password",
+      "note": "Live managed aws_ssm_parameter resource: servicenow_password."
+    },
+    {
+      "id": "aws_ssm_parameter.servicenow_user",
+      "category": "sandbox",
+      "name": "servicenow_user",
+      "note": "Live managed aws_ssm_parameter resource: servicenow_user."
+    },
+    {
+      "id": "aws_volume_attachment.vol_b_attach",
+      "category": "sandbox",
+      "name": "vol_b_attach",
+      "note": "Live managed aws_volume_attachment resource: vol_b_attach."
+    }
+  ],
+  "count": 89
+}
