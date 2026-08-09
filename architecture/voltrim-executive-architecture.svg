@@ -3,9 +3,9 @@
   <desc id="desc">Enterprise users access VolTrim through Entra ID and a web portal. A governance account reads organization inventory, financial and audit sources, validates current EC2 state in workload accounts, and integrates with ServiceNow. Automated remediation is shown as a future gated path.</desc>
   <defs>
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#172033" flood-opacity="0.12"/></filter>
-    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#147EBA"/></marker>
-    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#ED7100"/></marker>
-    <marker id="arrowPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#8B5CF6"/></marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="7.3" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0.6 L10 5 L0 9.4 Z" fill="#147EBA"/></marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="7.3" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0.6 L10 5 L0 9.4 Z" fill="#ED7100"/></marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="7.3" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0.6 L10 5 L0 9.4 Z" fill="#8B5CF6"/></marker>
     <style>
       .title{font:700 30px Arial,sans-serif;fill:#172033}.subtitle{font:400 14px Arial,sans-serif;fill:#5F6B7A}.zone-title{font:700 15px Arial,sans-serif;fill:#172033}.zone-sub{font:400 11px Arial,sans-serif;fill:#667085}.node-title{font:700 12px Arial,sans-serif;fill:#172033}.node-sub{font:400 10px Arial,sans-serif;fill:#667085}.flow{font:700 10px Arial,sans-serif;fill:#344054}.step{font:700 11px Arial,sans-serif;fill:#fff}.legend{font:600 10px Arial,sans-serif;fill:#344054}.small{font:400 9px Arial,sans-serif;fill:#667085}
     </style>
@@ -47,11 +47,11 @@
 
     <g transform="translate(330 174)">
       <rect width="165" height="108" rx="11" fill="#F8FAFC" stroke="#AAB7C4"/><image x="16" y="15" width="42" height="42" href="aws-icons/Arch_Amazon-Route-53_48.svg"/><image x="66" y="15" width="42" height="42" href="aws-icons/Arch_Amazon-CloudFront_48.svg"/><text x="82" y="76" text-anchor="middle" class="node-title">Portal delivery</text><text x="82" y="93" text-anchor="middle" class="node-sub">Route 53 + CloudFront</text>
-      <rect x="190" width="165" height="108" rx="11" fill="#F8FAFC" stroke="#AAB7C4"/><image x="251" y="13" width="44" height="44" href="aws-icons/Arch_Amazon-API-Gateway_48.svg"/><text x="272" y="76" text-anchor="middle" class="node-title">Authorized API</text><text x="272" y="93" text-anchor="middle" class="node-sub">JWT + throttling</text>
-      <rect x="380" width="210" height="108" rx="11" fill="#FFF7E8" stroke="#ED7100"/><image x="401" y="13" width="44" height="44" href="aws-icons/Arch_AWS-Lambda_48.svg"/><text x="460" y="31" class="node-title">VolTrim services</text><text x="460" y="48" class="node-sub">Inventory + governed APIs</text><text x="485" y="76" text-anchor="middle" class="node-sub">Deterministic facts before AI</text><text x="485" y="93" text-anchor="middle" class="node-sub">Read-only enterprise baseline</text>
+      <rect x="195" width="165" height="108" rx="11" fill="#F8FAFC" stroke="#AAB7C4"/><image x="256" y="13" width="44" height="44" href="aws-icons/Arch_Amazon-API-Gateway_48.svg"/><text x="277" y="76" text-anchor="middle" class="node-title">Authorized API</text><text x="277" y="93" text-anchor="middle" class="node-sub">JWT + throttling</text>
+      <rect x="390" width="200" height="108" rx="11" fill="#FFF7E8" stroke="#ED7100"/><image x="411" y="13" width="44" height="44" href="aws-icons/Arch_AWS-Lambda_48.svg"/><text x="470" y="31" class="node-title">VolTrim services</text><text x="470" y="48" class="node-sub">Inventory + governed APIs</text><text x="490" y="76" text-anchor="middle" class="node-sub">Deterministic facts before AI</text><text x="490" y="93" text-anchor="middle" class="node-sub">Read-only enterprise baseline</text>
     </g>
 
-    <path d="M495 228 H520" stroke="#ED7100" stroke-width="2" marker-end="url(#arrowOrange)"/><path d="M685 228 H710" stroke="#ED7100" stroke-width="2" marker-end="url(#arrowOrange)"/>
+    <path d="M495 228 H525" stroke="#ED7100" stroke-width="2" marker-end="url(#arrowOrange)"/><path d="M690 228 H720" stroke="#ED7100" stroke-width="2" marker-end="url(#arrowOrange)"/>
     <g transform="translate(330 320)">
       <rect width="280" height="122" rx="11" fill="#F8FAFC" stroke="#AAB7C4"/><image x="18" y="18" width="44" height="44" href="aws-icons/Arch_Amazon-DynamoDB_48.svg"/><text x="78" y="37" class="node-title">Promoted inventory + workflow</text><text x="78" y="55" class="node-sub">DynamoDB - versioned snapshot pointer</text><text x="18" y="88" class="node-sub">One snapshot ID serves dashboard and Ask VolTrim</text><text x="18" y="105" class="node-sub">Incomplete account/Region coverage fails closed</text>
       <rect x="310" width="280" height="122" rx="11" fill="#F8FAFC" stroke="#AAB7C4"/><image x="328" y="18" width="44" height="44" href="aws-icons/Arch_Amazon-Bedrock_48.svg"/><text x="388" y="37" class="node-title">Ask VolTrim explanation</text><text x="388" y="55" class="node-sub">Amazon Bedrock - governed fact bundle</text><text x="328" y="88" class="node-sub">Citations + freshness + limitations required</text><text x="328" y="105" class="node-sub">No approval or mutation authority</text>
@@ -103,21 +103,21 @@
        the right-hand lane at x=1580) so they never cross a zone interior or a
        numbered badge. Short hops 1-4 and 6 live in the inter-zone gaps, which are
        sized to hold a badge and its label without touching either border. -->
-  <path d="M248 513 H284" stroke="#ED7100" stroke-width="2.4" marker-end="url(#arrowOrange)"/><circle cx="266" cy="493" r="12" fill="#ED7100"/><text x="266" y="497" text-anchor="middle" class="step">1</text><text x="266" y="536" text-anchor="middle" class="flow">SSO</text>
+  <path d="M248 513 H284" stroke="#ED7100" stroke-width="2" marker-end="url(#arrowOrange)"/><circle cx="266" cy="493" r="12" fill="#ED7100"/><text x="266" y="497" text-anchor="middle" class="step">1</text><text x="266" y="536" text-anchor="middle" class="flow">SSO</text>
 
-  <path d="M920 245 H1010" stroke="#147EBA" stroke-width="2.4" marker-end="url(#arrowBlue)"/><circle cx="972" cy="222" r="12" fill="#147EBA"/><text x="972" y="226" text-anchor="middle" class="step">2</text><text x="972" y="270" text-anchor="middle" class="flow">inventory</text>
+  <path d="M920 245 H1010" stroke="#147EBA" stroke-width="2" marker-end="url(#arrowBlue)"/><circle cx="972" cy="222" r="12" fill="#147EBA"/><text x="972" y="226" text-anchor="middle" class="step">2</text><text x="972" y="270" text-anchor="middle" class="flow">inventory</text>
 
-  <path d="M1274 260 H1346" stroke="#147EBA" stroke-width="2.4" marker-end="url(#arrowBlue)"/><circle cx="1310" cy="237" r="12" fill="#147EBA"/><text x="1310" y="241" text-anchor="middle" class="step">3</text><text x="1310" y="285" text-anchor="middle" class="flow">live state</text>
+  <path d="M1274 260 H1346" stroke="#147EBA" stroke-width="2" marker-end="url(#arrowBlue)"/><circle cx="1310" cy="237" r="12" fill="#147EBA"/><text x="1310" y="241" text-anchor="middle" class="step">3</text><text x="1310" y="285" text-anchor="middle" class="flow">live state</text>
 
-  <path d="M1010 419 H920" stroke="#147EBA" stroke-width="2.4" marker-end="url(#arrowBlue)"/><circle cx="972" cy="396" r="12" fill="#147EBA"/><text x="972" y="400" text-anchor="middle" class="step">4</text><text x="972" y="444" text-anchor="middle" class="flow">cost + audit</text>
+  <path d="M1010 419 H920" stroke="#147EBA" stroke-width="2" marker-end="url(#arrowBlue)"/><circle cx="972" cy="396" r="12" fill="#147EBA"/><text x="972" y="400" text-anchor="middle" class="step">4</text><text x="972" y="444" text-anchor="middle" class="flow">cost + audit</text>
 
-  <path d="M920 700 H952 V790 H1580 V639 H1554" fill="none" stroke="#ED7100" stroke-width="2.4" marker-end="url(#arrowOrange)"/>
+  <path d="M920 700 H952 V790 H1580 V639 H1554" fill="none" stroke="#ED7100" stroke-width="2" marker-end="url(#arrowOrange)"/>
   <rect x="1166" y="781" width="86" height="18" rx="5" fill="#F7F8FA"/>
   <circle cx="1140" cy="790" r="12" fill="#ED7100"/><text x="1140" y="794" text-anchor="middle" class="step">5</text><text x="1172" y="794" class="flow">ticket + notify</text>
 
-  <path d="M1360 639 H1266" fill="none" stroke="#147EBA" stroke-width="2.4" marker-end="url(#arrowBlue)"/><circle cx="1310" cy="616" r="12" fill="#147EBA"/><text x="1310" y="620" text-anchor="middle" class="step">6</text><text x="1310" y="664" text-anchor="middle" class="flow">ticket</text><text x="1310" y="677" text-anchor="middle" class="flow">evidence</text>
+  <path d="M1360 639 H1266" fill="none" stroke="#147EBA" stroke-width="2" marker-end="url(#arrowBlue)"/><circle cx="1310" cy="616" r="12" fill="#147EBA"/><text x="1310" y="620" text-anchor="middle" class="step">6</text><text x="1310" y="664" text-anchor="middle" class="flow">ticket</text><text x="1310" y="677" text-anchor="middle" class="flow">evidence</text>
 
-  <path d="M904 536 H936 V88 H1580 V420 H1554" fill="none" stroke="#8B5CF6" stroke-width="2.4" stroke-dasharray="8 5" marker-end="url(#arrowPurple)"/>
+  <path d="M904 536 H936 V88 H1580 V420 H1554" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#arrowPurple)"/>
   <rect x="1196" y="79" width="70" height="18" rx="5" fill="#F7F8FA"/>
   <circle cx="1170" cy="88" r="12" fill="#8B5CF6"/><text x="1170" y="92" text-anchor="middle" class="step">7</text><text x="1202" y="92" class="flow">future path</text>
 
@@ -125,9 +125,9 @@
   <g transform="translate(-14 0)">
     <rect x="32" y="806" width="1546" height="84" rx="12" fill="#fff" stroke="#D0D5DD"/>
     <text x="52" y="834" class="zone-title">Legend and deployment responsibility</text>
-    <line x1="52" y1="858" x2="98" y2="858" stroke="#147EBA" stroke-width="3" marker-end="url(#arrowBlue)"/><text x="110" y="862" class="legend">Read / evidence flow</text>
-    <line x1="280" y1="858" x2="326" y2="858" stroke="#ED7100" stroke-width="3" marker-end="url(#arrowOrange)"/><text x="338" y="862" class="legend">Portal / workflow flow</text>
-    <line x1="530" y1="858" x2="576" y2="858" stroke="#8B5CF6" stroke-width="3" stroke-dasharray="7 4" marker-end="url(#arrowPurple)"/><text x="588" y="862" class="legend">Future gated mutation</text>
+    <line x1="52" y1="858" x2="98" y2="858" stroke="#147EBA" stroke-width="2" marker-end="url(#arrowBlue)"/><text x="110" y="862" class="legend">Read / evidence flow</text>
+    <line x1="280" y1="858" x2="326" y2="858" stroke="#ED7100" stroke-width="2" marker-end="url(#arrowOrange)"/><text x="338" y="862" class="legend">Portal / workflow flow</text>
+    <line x1="530" y1="858" x2="576" y2="858" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#arrowPurple)"/><text x="588" y="862" class="legend">Future gated mutation</text>
     <rect x="790" y="846" width="28" height="22" rx="4" fill="#FFF1E5" stroke="#ED7100"/><text x="828" y="862" class="legend">VolTrim deployed</text>
     <rect x="970" y="846" width="28" height="22" rx="4" fill="#E8F2FA" stroke="#147EBA" stroke-dasharray="5 3"/><text x="1008" y="862" class="legend">Enterprise provided</text>
     <rect x="1180" y="846" width="28" height="22" rx="4" fill="#F7F2FF" stroke="#8B5CF6" stroke-dasharray="5 3"/><text x="1218" y="862" class="legend">Future / gated</text>
