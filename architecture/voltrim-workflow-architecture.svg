@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 660" width="1240" height="660" role="img" aria-labelledby="wf-title wf-desc" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title id="wf-title">VolTrim end-to-end workflow</title>
+  <desc id="wf-desc">Five stages, left to right: AWS runs the resources; AWS records what happened; VolTrim collects and normalises that evidence; the portal answers five governance questions; a human approves before any change is made. Deletion stays gated behind approval.</desc>
+
+  <defs>
+    <marker id="wfArrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#539fe5"/>
+    </marker>
+  </defs>
+
+  <rect width="1240" height="660" fill="#0b1220"/>
+
+  <!-- Header -->
+  <text x="40" y="46" fill="#f8fafc" font-size="21" font-weight="700" letter-spacing="-0.3">How VolTrim works, end to end</text>
+  <text x="40" y="70" fill="#94a3b8" font-size="13">Read left to right. Every stage is read-only until the final approval gate.</text>
+
+  <!-- ============ STAGE 1 ============ -->
+  <rect x="30" y="100" width="226" height="292" rx="12" fill="#111827" stroke="#263244"/>
+  <circle cx="56" cy="128" r="14" fill="#539fe5"/>
+  <text x="56" y="133" fill="#0b1220" font-size="14" font-weight="700" text-anchor="middle">1</text>
+  <text x="80" y="133" fill="#f8fafc" font-size="14.5" font-weight="700">Your AWS estate</text>
+  <text x="48" y="162" fill="#22d3ee" font-size="11.5" font-style="italic">"What do we actually run?"</text>
+  <line x1="48" y1="176" x2="238" y2="176" stroke="#263244"/>
+  <text x="48" y="200" fill="#f8fafc" font-size="11.5">EC2 instances</text>
+  <text x="48" y="220" fill="#f8fafc" font-size="11.5">EBS volumes and snapshots</text>
+  <text x="48" y="240" fill="#f8fafc" font-size="11.5">Multiple accounts and Regions</text>
+  <text x="48" y="276" fill="#94a3b8" font-size="11">People and tools create,</text>
+  <text x="48" y="293" fill="#94a3b8" font-size="11">detach and delete storage</text>
+  <text x="48" y="310" fill="#94a3b8" font-size="11">here every day.</text>
+  <rect x="48" y="336" width="190" height="34" rx="7" fill="#0b1220" stroke="#263244"/>
+  <text x="143" y="357" fill="#94a3b8" font-size="10.5" text-anchor="middle">VolTrim never changes anything here</text>
+
+  <!-- ============ STAGE 2 ============ -->
+  <rect x="268" y="100" width="226" height="292" rx="12" fill="#111827" stroke="#263244"/>
+  <circle cx="294" cy="128" r="14" fill="#539fe5"/>
+  <text x="294" y="133" fill="#0b1220" font-size="14" font-weight="700" text-anchor="middle">2</text>
+  <text x="318" y="133" fill="#f8fafc" font-size="14.5" font-weight="700">AWS records it</text>
+  <text x="286" y="162" fill="#22d3ee" font-size="11.5" font-style="italic">"What happened, and when?"</text>
+  <line x1="286" y1="176" x2="476" y2="176" stroke="#263244"/>
+  <text x="286" y="200" fill="#f8fafc" font-size="11.5" font-weight="600">CloudTrail</text>
+  <text x="286" y="216" fill="#94a3b8" font-size="10.5">who deleted what, when</text>
+  <text x="286" y="240" fill="#f8fafc" font-size="11.5" font-weight="600">AWS Config</text>
+  <text x="286" y="256" fill="#94a3b8" font-size="10.5">size, type and tags before it went</text>
+  <text x="286" y="280" fill="#f8fafc" font-size="11.5" font-weight="600">CUR 2.0</text>
+  <text x="286" y="296" fill="#94a3b8" font-size="10.5">what it actually cost on the bill</text>
+  <text x="286" y="320" fill="#f8fafc" font-size="11.5" font-weight="600">Compute Optimizer</text>
+  <text x="286" y="336" fill="#94a3b8" font-size="10.5">what could be smaller or cheaper</text>
+  <rect x="286" y="352" width="190" height="26" rx="7" fill="#0b1220" stroke="#263244"/>
+  <text x="381" y="369" fill="#94a3b8" font-size="10.5" text-anchor="middle">These are the systems of record</text>
+
+  <!-- ============ STAGE 3 ============ -->
+  <rect x="506" y="100" width="226" height="292" rx="12" fill="#111827" stroke="#263244"/>
+  <circle cx="532" cy="128" r="14" fill="#539fe5"/>
+  <text x="532" y="133" fill="#0b1220" font-size="14" font-weight="700" text-anchor="middle">3</text>
+  <text x="556" y="133" fill="#f8fafc" font-size="14.5" font-weight="700">VolTrim collects</text>
+  <text x="524" y="162" fill="#22d3ee" font-size="11.5" font-style="italic">"Turn raw logs into facts"</text>
+  <line x1="524" y1="176" x2="714" y2="176" stroke="#263244"/>
+  <text x="524" y="200" fill="#f8fafc" font-size="11.5">Reads the sources on a schedule</text>
+  <text x="524" y="224" fill="#f8fafc" font-size="11.5">Joins them into one record</text>
+  <text x="524" y="248" fill="#f8fafc" font-size="11.5">per volume and instance</text>
+  <text x="524" y="272" fill="#f8fafc" font-size="11.5">Stores a dated snapshot</text>
+  <text x="524" y="304" fill="#94a3b8" font-size="10.5">Lambda reads · Athena queries ·</text>
+  <text x="524" y="321" fill="#94a3b8" font-size="10.5">DynamoDB holds the snapshot</text>
+  <rect x="524" y="336" width="190" height="34" rx="7" fill="#0b1220" stroke="#10b981"/>
+  <text x="619" y="350" fill="#10b981" font-size="10.5" text-anchor="middle">Read-only permissions</text>
+  <text x="619" y="364" fill="#94a3b8" font-size="10" text-anchor="middle">no delete rights at this stage</text>
+
+  <!-- ============ STAGE 4 ============ -->
+  <rect x="744" y="100" width="226" height="292" rx="12" fill="#111827" stroke="#263244"/>
+  <circle cx="770" cy="128" r="14" fill="#539fe5"/>
+  <text x="770" y="133" fill="#0b1220" font-size="14" font-weight="700" text-anchor="middle">4</text>
+  <text x="794" y="133" fill="#f8fafc" font-size="14.5" font-weight="700">The portal answers</text>
+  <text x="762" y="162" fill="#22d3ee" font-size="11.5" font-style="italic">"So what should we do?"</text>
+  <line x1="762" y1="176" x2="952" y2="176" stroke="#263244"/>
+  <text x="762" y="199" fill="#10b981" font-size="11.5" font-weight="600">Savings</text>
+  <text x="762" y="214" fill="#94a3b8" font-size="10.5">how much we already saved</text>
+  <text x="762" y="236" fill="#22d3ee" font-size="11.5" font-weight="600">Optimization</text>
+  <text x="762" y="251" fill="#94a3b8" font-size="10.5">what we could still save</text>
+  <text x="762" y="273" fill="#539fe5" font-size="11.5" font-weight="600">Application governance</text>
+  <text x="762" y="288" fill="#94a3b8" font-size="10.5">who owns it</text>
+  <text x="762" y="310" fill="#f59e0b" font-size="11.5" font-weight="600">Security posture</text>
+  <text x="762" y="325" fill="#94a3b8" font-size="10.5">is it safe</text>
+  <text x="762" y="347" fill="#a78bfa" font-size="11.5" font-weight="600">Audit and evidence</text>
+  <text x="762" y="362" fill="#94a3b8" font-size="10.5">prove it</text>
+
+  <!-- ============ STAGE 5 ============ -->
+  <rect x="982" y="100" width="226" height="292" rx="12" fill="#111827" stroke="#f59e0b"/>
+  <circle cx="1008" cy="128" r="14" fill="#f59e0b"/>
+  <text x="1008" y="133" fill="#0b1220" font-size="14" font-weight="700" text-anchor="middle">5</text>
+  <text x="1032" y="133" fill="#f8fafc" font-size="14.5" font-weight="700">A human decides</text>
+  <text x="1000" y="162" fill="#22d3ee" font-size="11.5" font-style="italic">"Nothing happens until approved"</text>
+  <line x1="1000" y1="176" x2="1190" y2="176" stroke="#263244"/>
+  <text x="1000" y="200" fill="#f8fafc" font-size="11.5">Owner is notified</text>
+  <text x="1000" y="224" fill="#f8fafc" font-size="11.5">Ticket raised for approval</text>
+  <text x="1000" y="248" fill="#f8fafc" font-size="11.5">Backup snapshot taken first</text>
+  <text x="1000" y="272" fill="#f8fafc" font-size="11.5">Only then is it deleted</text>
+  <text x="1000" y="296" fill="#f8fafc" font-size="11.5">Every step written to the ledger</text>
+  <rect x="1000" y="318" width="190" height="52" rx="7" fill="#0b1220" stroke="#f59e0b"/>
+  <text x="1095" y="337" fill="#f59e0b" font-size="10.5" font-weight="700" text-anchor="middle">GATED — future phase</text>
+  <text x="1095" y="352" fill="#94a3b8" font-size="10" text-anchor="middle">Deletion is off by default and</text>
+  <text x="1095" y="365" fill="#94a3b8" font-size="10" text-anchor="middle">needs a separate approval</text>
+
+  <!-- Arrows -->
+  <line x1="258" y1="246" x2="264" y2="246" stroke="#539fe5" stroke-width="2.5" marker-end="url(#wfArrow)"/>
+  <line x1="496" y1="246" x2="502" y2="246" stroke="#539fe5" stroke-width="2.5" marker-end="url(#wfArrow)"/>
+  <line x1="734" y1="246" x2="740" y2="246" stroke="#539fe5" stroke-width="2.5" marker-end="url(#wfArrow)"/>
+  <line x1="972" y1="246" x2="978" y2="246" stroke="#539fe5" stroke-width="2.5" marker-end="url(#wfArrow)"/>
+
+  <!-- Read-only band -->
+  <rect x="30" y="414" width="702" height="40" rx="9" fill="#0b1220" stroke="#10b981"/>
+  <text x="381" y="439" fill="#10b981" font-size="12.5" font-weight="600" text-anchor="middle">Stages 1–3 are strictly read-only — VolTrim can look, but cannot touch</text>
+  <rect x="744" y="414" width="464" height="40" rx="9" fill="#0b1220" stroke="#f59e0b"/>
+  <text x="976" y="439" fill="#f59e0b" font-size="12.5" font-weight="600" text-anchor="middle">Any change requires a person to approve it first</text>
+
+  <!-- Footnote -->
+  <line x1="30" y1="486" x2="1208" y2="486" stroke="#263244"/>
+  <text x="30" y="512" fill="#f8fafc" font-size="12.5" font-weight="700">Why it is built this way</text>
+  <text x="30" y="536" fill="#94a3b8" font-size="11.5">Savings are measured from CloudTrail, so a deletion counts no matter who did it — console, Terraform, another tool or VolTrim itself.</text>
+  <text x="30" y="558" fill="#94a3b8" font-size="11.5">Cost comes from the bill (CUR), not an estimate, so Finance can rely on it. Recommendations come from AWS Compute Optimizer rather than</text>
+  <text x="30" y="580" fill="#94a3b8" font-size="11.5">a home-grown engine. And because measuring never needs delete permission, the whole reporting capability stays safe by design.</text>
+  <text x="30" y="614" fill="#94a3b8" font-size="10.5" font-style="italic">Demonstration uses synthetic data. Icons and service names indicate the intended AWS services in the target state.</text>
+</svg>
